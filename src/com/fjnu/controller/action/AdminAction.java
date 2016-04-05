@@ -1,0 +1,198 @@
+package com.fjnu.controller.action;
+
+import com.fjnu.dao.SeatDAO;
+import com.fjnu.domain.*;
+import com.fjnu.service.*;
+import com.opensymphony.xwork2.ModelDriven;
+
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+
+/**
+ * Created by spzn on 16-2-26.
+ */
+public class AdminAction extends SuperAction implements ModelDriven<CoachStudent>{
+    CoachStudent coachStudent = new CoachStudent();
+
+    //加载Coach与课程的对应
+    public String LoadCoachCourse() {
+        GetMessageService getMessageService = new GetMessageServiceImpl();
+        List<CoachStudent> list = getMessageService.GetCoachCourse(coachStudent);
+        request.setAttribute("List", list);
+        return "LoadCoachCourse";
+    }
+
+    public String DeleteCoachCourse() {
+        DeleteMessageService deleteMessageService = new DeleteMessageServiceImpl();
+        CoachCourse coachCourse = new CoachCourse();
+        coachCourse.setCoa_id(request.getParameter("coa_id"));
+        coachCourse.setCou_id(request.getParameter("cou_id"));
+        deleteMessageService.DeleteCoachCourse(coachCourse);
+        return "DeleteCoachCourse";
+    }
+
+    //获取coach及couse信息
+    public String GetCoachAndCourse() throws IOException {
+        GetMessageService getMessageService = new GetMessageServiceImpl();
+        request.setAttribute("CoachList", getMessageService.GetCoach());
+        request.setAttribute("CourseList", getMessageService.GetCourse());
+        request.setAttribute("StationList", getMessageService.GetStation());
+        return "GetCoachAndCourse";
+    }
+
+    //师资安排，增加Coach和Course的对应
+    public String InsertCoachCourse() {
+        AddMessageService addMessageService = new AddMessageServiceImpl();
+        CoachCourse coachCourse = new CoachCourse();
+        coachCourse.setCoa_id(coachStudent.getCoa_id());
+        coachCourse.setCou_id(coachStudent.getCou_id());
+        coachCourse.setPrice(coachStudent.getPrice());
+        coachCourse.setStation(coachStudent.getStation());
+        addMessageService.AddCoachCourse(coachCourse);
+        return "InsertCoachCourse";
+    }
+
+    public String GetCoachSchedule() {
+        GetMessageService getMessageService = new GetMessageServiceImpl();
+        Schedule schedule = new Schedule();
+        if (coachStudent.getCoa_id() != null && !coachStudent.getCoa_id().equals("")) {
+            schedule = getMessageService.GetSchedule(coachStudent);
+        }
+        TimeTable timeTable = new TimeTable();
+        request.setAttribute("name", getMessageService.GetUserName(coachStudent.getCoa_id()));
+        request.setAttribute("List", schedule.getCSschedule());
+        request.setAttribute("TimeList", timeTable);
+        return "GetCoachSchedule";
+    }
+
+    public String GetStudentSchedule() {
+        GetMessageService getMessageService = new GetMessageServiceImpl();
+        Schedule schedule = new Schedule();
+        if (coachStudent.getStu_id() != null && !coachStudent.getStu_id().equals("")) {
+            schedule = getMessageService.GetSchedule(coachStudent);
+        }
+        TimeTable timeTable = new TimeTable();
+        request.setAttribute("name", getMessageService.GetUserName(coachStudent.getStu_id()));
+        request.setAttribute("List", schedule.getCSschedule());
+        request.setAttribute("TimeList", timeTable);
+        return "GetStudentSchedule";
+    }
+
+    public String GetFeedback() {
+        GetMessageService getMessageService = new GetMessageServiceImpl();
+        List<Feedback> list = new ArrayList<Feedback>();
+        list = getMessageService.GetFeedback();
+        request.setAttribute("List", list);
+        return "GetFeedback";
+    }
+
+    public String GetSeatInfo() {
+        GetMessageService getMessageService = new GetMessageServiceImpl();
+        List<Seat> list = new ArrayList<>();
+        list = getMessageService.GetSeat();
+        request.setAttribute("SeatList",list);
+        return "GetSeatInfo";
+    }
+
+    public String GetSeatDetail() {
+        CoachStudent coachStudent = new CoachStudent();
+        /**
+         * 转码！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！
+         */
+        String str = request.getParameter("station");
+        try {
+         //   str = new String(str.getBytes("ISO-8859-1"),"utf-8");
+        }catch (Exception e) {}
+        coachStudent.setClassroom(request.getParameter("classroom"));
+        coachStudent.setStation(str);
+        GetMessageService getMessageService = new GetMessageServiceImpl();
+        int[][] state = new int[26][7];
+        state = getMessageService.GetSeatDetail(coachStudent);
+        request.setAttribute("state", state);
+        return "GetSeatDetail";
+    }
+
+    public String GetPALInfo() {
+
+        return "GetPALInfo";
+    }
+
+    public String GetIncomeInfo() {
+
+        return "GetIncomeInfo";
+    }
+
+    public String GetPayInfo() {
+
+        return "GetPayInfo";
+    }
+
+    public String GetClassConsume() {
+
+        return "GetClassConsume";
+    }
+
+    public void DeleteSeat() {
+        Seat seat = new Seat();
+        System.out.println(request.getParameter("station_name"));
+        seat.setStation_name(request.getParameter("station_name"));
+        seat.setClassroom(request.getParameter("classroom"));
+        DeleteMessageService deleteMessageService = new DeleteMessageServiceImpl();
+        deleteMessageService.DeleteSeat(seat);
+        this.GetSeatInfo();
+    }
+
+    public String DeleteSeatByName() {
+        Seat seat = new Seat();
+        System.out.println(request.getParameter("station_name"));
+        String str = request.getParameter("station_name");
+        try {
+           // str = new String(str.getBytes("ISO-8859-1"),"utf-8");
+        } catch (Exception e) {}
+        seat.setStation_name(str);
+        seat.setClassroom(request.getParameter("classroom"));
+        DeleteMessageService deleteMessageService = new DeleteMessageServiceImpl();
+        deleteMessageService.DeleteSeatByName(seat);
+        GetMessageService getMessageService = new GetMessageServiceImpl();
+        List<Seat> list = new ArrayList<>();
+        list = getMessageService.GetSeat();
+        request.setAttribute("SeatList",list);
+        return "GetSeatInfo";
+    }
+
+    public String GetNopayOrder() {
+        GetMessageService getMessageService = new GetMessageServiceImpl();
+        List<CoachStudent> list = new ArrayList<>();
+
+        list = getMessageService.GetNopayOrder();
+        request.setAttribute("NopayOrder", list);
+
+        return null;
+    }
+
+    public void ChangePayment() {
+        int id = Integer.parseInt(request.getParameter("id").toString());
+
+        UpdateMessageService updateMessageService = new UpdateMessageServiceImpl();
+        updateMessageService.ChangePayment(id);
+    }
+
+    public String Payment() {
+        GetMessageService getMessageService = new GetMessageServiceImpl();
+        List<CoachStudent> list = new ArrayList<>();
+        list = getMessageService.GetNopayOrder();
+
+        request.setAttribute("NopayOrder", list);
+        return "payment";
+    }
+
+    public void DeleteOrder() {
+        int id = Integer.parseInt(request.getParameter("id").toString());
+
+        UpdateMessageService updateMessageService = new UpdateMessageServiceImpl();
+        updateMessageService.DeleteOrder(id);
+    }
+    @Override
+    public CoachStudent getModel() { return coachStudent; }
+}
