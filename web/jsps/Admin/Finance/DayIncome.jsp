@@ -47,11 +47,11 @@
                 <li class="active">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">财务管理 <span class="caret"></span></a>
                     <ul class="dropdown-menu" role="menu">
-                        <li><a href="#feature-tab" data-tab="tab-chrome">查看每月收支</a></li>
-                        <li><a href="#feature-tab" data-tab="tab-firefox">每日收支管理</a></li>
+                        <li><a href="admin_GetPALInfo.action" data-tab="tab-chrome">查看每月收支</a></li>
+                        <li><a href="admin_GetDayIncome.action" data-tab="tab-firefox">每日收支管理</a></li>
                         <li><a href="#feature-tab" data-tab="tab-firefox">薪资管理</a></li>
-                        <li><a href="#feature-tab" data-tab="tab-chrome">课消及提成管理</a></li>
-                        <li><a href="#feature-tab" data-tab="tab-firefox">课程收费标准管理</a></li>
+                        <li><a href="admin_GetClassConsume.action" data-tab="tab-chrome">课消及提成管理</a></li>
+                        <li><a href="admin_Payment.action" data-tab="tab-firefox">课程收费标准管理</a></li>
                     </ul>
                 </li>
 
@@ -78,11 +78,11 @@
 
 <div id="second">
     <ul class="nav nav-tabs" role="tablist">
-        <li><a href="#A" role="tab" data-toggle="tab">查看每月支出</a></li>
-        <li class="active"><a href="#B" role="tab" data-toggle="tab">每日收支管理</a></li>
+        <li><a href="admin_GetPayInfo.action">查看每月支出</a></li>
+        <li class="active"><a href="admin_GetDayIncome.action">每日收支管理</a></li>
         <li><a href="#C" role="tab" data-toggle="tab">薪资管理</a></li>
-        <li><a href="#D" role="tab" data-toggle="tab">课消及提成管理</a></li>
-        <li><a href="#E" role="tab" data-toggle="tab">课程收费标准管理</a></li>
+        <li><a href="admin_GetClassConsume.action">课消及提成管理</a></li>
+        <li><a href="admin_Payment.action">课程收费标准管理</a></li>
     </ul>
 </div>
 
@@ -90,7 +90,7 @@
     <div class="tab-pane active" id="A">
         <div id="third">
             <ul class="nav nav-pills">
-                <li role="presentation" class="active"><a href="#">每日收入管理</a></li>
+                <li role="presentation" class="active"><a href="admin_GetDayIncome.action">每日收入管理</a></li>
                 <li role="presentation"><a href="#">每日支出管理</a></li>
             </ul>
         </div>

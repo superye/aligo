@@ -49,10 +49,10 @@
                             class="caret"></span></a>
                    <ul class="dropdown-menu" role="menu">
                         <li><a href="admin_GetPALInfo.action">查看每月盈亏</a></li>
-                        <li><a href="#feature-tab" data-tab="tab-firefox">每日收支管理</a></li>
+                        <li><a href="admin_GetDayIncome.action">每日收支管理</a></li>
                         <li><a href="#feature-tab" data-tab="tab-firefox">薪资管理</a></li>
                         <li><a href="admin_GetClassConsume.action">课消及提成管理</a></li>
-                        <li><a href="#feature-tab" data-tab="tab-firefox">课程收费标准管理</a></li>
+                        <li><a href="admin_Payment.action">课程收费标准管理</a></li>
                     </ul>
                 </li>
 
@@ -80,10 +80,10 @@
 <div id="second">
     <ul class="nav nav-tabs" role="tablist">
         <li><a href="admin_GetPALInfo.action">查看每月支出</a></li>
-        <li><a href="#B" role="tab" data-toggle="tab">每日收支管理</a></li>
+        <li><a href="admin_GetDayIncome.action">每日收支管理</a></li>
         <li><a href="#C" role="tab" data-toggle="tab">薪资管理</a></li>
-        <li class="active"><a href="admin_GetClassConsume.action" role="tab" data-toggle="tab">课消及提成管理</a></li>
-        <li><a href="#E" role="tab" data-toggle="tab">课程收费标准管理</a></li>
+        <li class="active"><a href="admin_GetClassConsume.action">课消及提成管理</a></li>
+        <li><a href="admin_Payment.action">课程收费标准管理</a></li>
     </ul>
 </div>
 
