@@ -26,6 +26,6 @@
         <mapper resource="com/fjnu/config/sqlxml/Seat.xml"/>
         <mapper resource="com/fjnu/config/sqlxml/Feedback.xml"/>
         <mapper resource="com/fjnu/config/sqlxml/ClassFire.xml"/>
-        <mapper resource="com/fjnu/config/sqlxml/DayIncome"/>
+        <mapper resource="com/fjnu/config/sqlxml/DayIncome.xml"/>
     </mappers>
 </configuration>
