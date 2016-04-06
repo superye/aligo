@@ -36,11 +36,13 @@
             <result name="GetFeedback">jsps/Admin/Arranging_Course/ViewFeedback.jsp</result>
             <result name="GetSeatInfo">jsps/Admin/Arranging_Course/Seat_ViewSeat.jsp</result>
             <result name="GetSeatDetail">jsps/Admin/Arranging_Course/Seat_SeatDetail.jsp</result>
-            <result name="GetPALInfo">jsps/Admin/Arranging_Course/ViewPAL.jsp</result>
-            <result name="GetIncomeInfo">jsps/Admin/Arranging_Course/ViewIncome.jsp</result>
-            <result name="GetPayInfo">jsps/Admin/Arranging_Course/ViewPay.jsp</result>
-            <result name="GetClassConsume">jsps/Admin/Arranging_Course/Class_Consume.jsp</result>
+            <result name="GetPALInfo">/jsps/Admin/Finance/ViewPAL.jsp</result>
+            <result name="GetIncomeInfo">/jsps/Admin/Finance/ViewIncome.jsp</result>
+            <result name="GetPayInfo">jsps/Admin/Finance/ViewPay.jsp</result>
             <result name="payment">jsps/Admin/Finance/StudentPay.jsp</result>
+            <result name="GetDayIncome">jsps/Admin/Finance/DayIncome.jsp</result>
+            <result name="GetClassConsume">jsps/Admin/Finance/Class_Consume.jsp</result>
+
         </action>
         <action name="seat_*" class="com.fjnu.controller.action.SeatAction" method="{1}">
             <result name="AddSeat">jsps/Admin/Arranging_Course/Seat_AddSeat.jsp</result>

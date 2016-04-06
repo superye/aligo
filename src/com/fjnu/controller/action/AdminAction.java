@@ -128,11 +128,6 @@ public class AdminAction extends SuperAction implements ModelDriven<CoachStudent
         return "GetPayInfo";
     }
 
-    public String GetClassConsume() {
-
-        return "GetClassConsume";
-    }
-
     public void DeleteSeat() {
         Seat seat = new Seat();
         System.out.println(request.getParameter("station_name"));
@@ -193,6 +188,24 @@ public class AdminAction extends SuperAction implements ModelDriven<CoachStudent
         UpdateMessageService updateMessageService = new UpdateMessageServiceImpl();
         updateMessageService.DeleteOrder(id);
     }
-    @Override
+
+    public String GetClassConsume() {
+        ClassFire classfire = new ClassFire();
+        GetFinanceService getFinanceService = new GetFinanceServiceImpl();
+        List<ClassFire> list = new ArrayList<>();
+        list = getFinanceService.GetClassConsumeInfo();
+        request.setAttribute("classconsume", list);
+        return "GetClassConsume";
+    }
+
+    public String GetDayIncome() {
+        DayIncome dayIncome = new DayIncome();
+        GetFinanceService getFinanceService = new GetFinanceServiceImpl();
+        List<DayIncome> list = new ArrayList<>();
+        list = getFinanceService.GetDayIncomeInfo();
+        request.setAttribute("dayincome", list);
+        return "GetDayIncome";
+    }
+
     public CoachStudent getModel() { return coachStudent; }
 }
