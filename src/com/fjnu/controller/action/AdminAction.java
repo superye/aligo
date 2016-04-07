@@ -207,5 +207,13 @@ public class AdminAction extends SuperAction implements ModelDriven<CoachStudent
         return "GetDayIncome";
     }
 
+    public String GetDayOutput() {
+        station_day_output sdo = new station_day_output();
+        GetFinanceService getFinanceService = new GetFinanceServiceImpl();
+        List<station_day_output> list = new ArrayList<>();
+        list = getFinanceService.GetDayOutputInfo();
+        request.setAttribute("dayoutput", list);
+        return "GetDayOutput";
+    }
     public CoachStudent getModel() { return coachStudent; }
 }

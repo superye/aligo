@@ -90,15 +90,15 @@
     <div class="tab-pane active" id="A">
         <div id="third">
             <ul class="nav nav-pills">
-                <li role="presentation" class="active"><a href="admin_GetDayIncome.action">每日收入管理</a></li>
-                <li role="presentation"><a href="admin_GetDayOutput.action">每日支出管理</a></li>
+                <li role="presentation"><a href="admin_GetDayIncome.action">每日收入管理</a></li>
+                <li role="presentation" class="active"><a href="admin_GetDayOutput.action">每日支出管理</a></li>
             </ul>
         </div>
     </div>
 </div>
 
 
-<div id="table1" class="table-responsive">
+<div id="table1" CLASS="table-responsive">
     <table class="table table-bordered">
         <thead>
         <tr>
@@ -106,160 +106,148 @@
             <th>站点</th>
             <th>类别</th>
             <th>品名</th>
-            <th>缴费金额</th>
-            <th>手续费</th>
-            <th>实际收入</th>
+            <th>实用</th>
             <th>余额</th>
             <th>交易类型</th>
+            <th>有无发票</th>
             <th>经手人</th>
         </tr>
         </thead>
         <tbody>
-        <c:forEach var="list" items="${dayincome}">
+        <c:forEach var="list" items="${dayoutput}">
             <tr>
-                <td>${list.getDate()}</td>
-                <td>${list.getStationId()}</td>
+                <td>${list.getTime()}</td>
+                <td>${list.getStation_name()}</td>
                 <td>${list.getType()}</td>
-                <td>${list.getProductName()}</td>
-                <td>${list.getPrice()}</td>
-                <td>${list.getPoundage()}</td>
-                <td>${list.getReal_income()}</td>
+                <td>${list.getPname()}</td>
+                <td>${list.getReal_output()}</td>
                 <td>${list.getBalance()}</td>
-                <td>${list.getPayType()}</td>
-                <td>${list.getBrokerage()}</td>
+                <td>${list.getTransaction_type()}</td>
+                <td>${list.getHas_invoice()}</td>
+                <td>${list.getPerson_in_charge()}</td>
             </tr>
         </c:forEach>
         </tbody>
         <!--
+        <tbody>
         <tr>
             <td>2015-11-02</td>
             <td>好苗苗</td>
-            <td>线下学管收入</td>
-            <td>小王一对一数学20H（9折）</td>
-            <td>1620.00</td>
-            <td>0.00%</td>
-            <td>1620.00</td>
-            <td>1620.00</td>
-            <td>现金</td>
+            <td>常规支出</td>
+            <td>厨房支出（11.2买菜）</td>
+            <td>98.00</td>
+            <td>902.00</td>
+            <td>周转金报销</td>
+            <td>有</td>
             <td>刘萌</td>
         </tr>
         <tr>
             <td>2015-11-02</td>
             <td>好苗苗</td>
-            <td>线下学管收入</td>
-            <td>小王一对一数学20H（9折）</td>
-            <td>1620.00</td>
-            <td>0.00%</td>
-            <td>1620.00</td>
-            <td>1620.00</td>
-            <td>现金</td>
+            <td>常规支出</td>
+            <td>厨房支出（11.2买菜）</td>
+            <td>98.00</td>
+            <td>902.00</td>
+            <td>周转金报销</td>
+            <td>有</td>
             <td>刘萌</td>
         </tr>
         <tr>
             <td>2015-11-02</td>
             <td>好苗苗</td>
-            <td>线下学管收入</td>
-            <td>小王一对一数学20H（9折）</td>
-            <td>1620.00</td>
-            <td>0.00%</td>
-            <td>1620.00</td>
-            <td>1620.00</td>
-            <td>现金</td>
+            <td>常规支出</td>
+            <td>厨房支出（11.2买菜）</td>
+            <td>98.00</td>
+            <td>902.00</td>
+            <td>周转金报销</td>
+            <td>有</td>
             <td>刘萌</td>
         </tr>
         <tr>
             <td>2015-11-02</td>
             <td>好苗苗</td>
-            <td>线下学管收入</td>
-            <td>小王一对一数学20H（9折）</td>
-            <td>1620.00</td>
-            <td>0.00%</td>
-            <td>1620.00</td>
-            <td>1620.00</td>
-            <td>现金</td>
+            <td>常规支出</td>
+            <td>厨房支出（11.2买菜）</td>
+            <td>98.00</td>
+            <td>902.00</td>
+            <td>周转金报销</td>
+            <td>有</td>
             <td>刘萌</td>
         </tr>
         <tr>
             <td>2015-11-02</td>
             <td>好苗苗</td>
-            <td>线下学管收入</td>
-            <td>小王一对一数学20H（9折）</td>
-            <td>1620.00</td>
-            <td>0.00%</td>
-            <td>1620.00</td>
-            <td>1620.00</td>
-            <td>现金</td>
+            <td>常规支出</td>
+            <td>厨房支出（11.2买菜）</td>
+            <td>98.00</td>
+            <td>902.00</td>
+            <td>周转金报销</td>
+            <td>有</td>
             <td>刘萌</td>
         </tr>
         <tr>
             <td>2015-11-02</td>
             <td>好苗苗</td>
-            <td>线下学管收入</td>
-            <td>小王一对一数学20H（9折）</td>
-            <td>1620.00</td>
-            <td>0.00%</td>
-            <td>1620.00</td>
-            <td>1620.00</td>
-            <td>现金</td>
+            <td>常规支出</td>
+            <td>厨房支出（11.2买菜）</td>
+            <td>98.00</td>
+            <td>902.00</td>
+            <td>周转金报销</td>
+            <td>有</td>
             <td>刘萌</td>
         </tr>
         <tr>
             <td>2015-11-02</td>
             <td>好苗苗</td>
-            <td>线下学管收入</td>
-            <td>小王一对一数学20H（9折）</td>
-            <td>1620.00</td>
-            <td>0.00%</td>
-            <td>1620.00</td>
-            <td>1620.00</td>
-            <td>现金</td>
+            <td>常规支出</td>
+            <td>厨房支出（11.2买菜）</td>
+            <td>98.00</td>
+            <td>902.00</td>
+            <td>周转金报销</td>
+            <td>有</td>
             <td>刘萌</td>
         </tr>
         <tr>
             <td>2015-11-02</td>
             <td>好苗苗</td>
-            <td>线下学管收入</td>
-            <td>小王一对一数学20H（9折）</td>
-            <td>1620.00</td>
-            <td>0.00%</td>
-            <td>1620.00</td>
-            <td>1620.00</td>
-            <td>现金</td>
+            <td>常规支出</td>
+            <td>厨房支出（11.2买菜）</td>
+            <td>98.00</td>
+            <td>902.00</td>
+            <td>周转金报销</td>
+            <td>有</td>
             <td>刘萌</td>
         </tr>
 
         <tr>
             <td>2015-11-02</td>
             <td>好苗苗</td>
-            <td>线下学管收入</td>
-            <td>小王一对一数学20H（9折）</td>
-            <td>1620.00</td>
-            <td>0.00%</td>
-            <td>1620.00</td>
-            <td>1620.00</td>
-            <td>现金</td>
+            <td>常规支出</td>
+            <td>厨房支出（11.2买菜）</td>
+            <td>98.00</td>
+            <td>902.00</td>
+            <td>周转金报销</td>
+            <td>有</td>
             <td>刘萌</td>
         </tr>
         <tr>
             <td>2015-11-02</td>
             <td>好苗苗</td>
-            <td>线下学管收入</td>
-            <td>小王一对一数学20H（9折）</td>
-            <td>1620.00</td>
-            <td>0.00%</td>
-            <td>1620.00</td>
-            <td>1620.00</td>
-            <td>现金</td>
+            <td>常规支出</td>
+            <td>厨房支出（11.2买菜）</td>
+            <td>98.00</td>
+            <td>902.00</td>
+            <td>周转金报销</td>
+            <td>有</td>
             <td>刘萌</td>
         </tr>
-        -->
         </tbody>
-
+        -->
     </table>
 </div>
 
 
-<div id="table2" class="table-responsive">
+<div id="table2">
     <nav>
         <ul class="pagination">
             <li>

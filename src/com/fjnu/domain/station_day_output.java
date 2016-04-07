@@ -19,6 +19,16 @@ public class station_day_output {
     private String has_invoice;
     private String person_in_charge;
 
+    public String getStation_name() {
+        return station_name;
+    }
+
+    public void setStation_name(String station_name) {
+        this.station_name = station_name;
+    }
+
+    private String station_name;
+
     public String getId() {
         return id;
     }

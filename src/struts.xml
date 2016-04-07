@@ -42,7 +42,7 @@
             <result name="payment">jsps/Admin/Finance/StudentPay.jsp</result>
             <result name="GetDayIncome">jsps/Admin/Finance/DayIncome.jsp</result>
             <result name="GetClassConsume">jsps/Admin/Finance/Class_Consume.jsp</result>
-
+            <result name="GetDayOutput">jsps/Admin/Finance/DayOutput.jsp</result>
         </action>
         <action name="seat_*" class="com.fjnu.controller.action.SeatAction" method="{1}">
             <result name="AddSeat">jsps/Admin/Arranging_Course/Seat_AddSeat.jsp</result>

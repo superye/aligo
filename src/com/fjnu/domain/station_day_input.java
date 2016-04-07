@@ -13,7 +13,7 @@ public class station_day_input {
     private String Pname;
     private String pay_money;
     private String counter_Fee;
-    private String real_input;
+    private String real_output;
     private String balance;
     private String transaction_type;
     private String has_invoice;
@@ -91,13 +91,9 @@ public class station_day_input {
         this.counter_Fee = counter_Fee;
     }
 
-    public String getReal_input() {
-        return real_input;
-    }
+    public String getReal_output() { return real_output; }
 
-    public void setReal_input(String real_input) {
-        this.real_input = real_input;
-    }
+    public void setReal_output(String real_output) { this.real_output = real_output; }
 
     public String getBalance() {
         return balance;
