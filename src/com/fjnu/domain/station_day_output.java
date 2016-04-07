@@ -1,23 +1,26 @@
 package com.fjnu.domain;
 
+import java.util.Date;
+
 /**
  * Created by spzn on 16-4-4.
  */
 public class station_day_output {
-    private String id;
+    private int id;
     private String apply_id;
     private String station_id;
     private String payer_id;
     private String time;
-    private String type;
+    private int type;
     private String Pname;
-    private String pay_money;
-    private String counter_Fee;
-    private String real_output;
-    private String balance;
-    private String transaction_type;
-    private String has_invoice;
-    private String person_in_charge;
+    private int pay_money;
+    private int counter_Fee;
+    private int real_output;
+    private int balance;
+    private int transaction_type;
+    private int has_invoice;
+    private int person_in_charge;
+    private String station_name;
 
     public String getStation_name() {
         return station_name;
@@ -27,13 +30,12 @@ public class station_day_output {
         this.station_name = station_name;
     }
 
-    private String station_name;
 
-    public String getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(int id) {
         this.id = id;
     }
 
@@ -69,11 +71,11 @@ public class station_day_output {
         this.time = time;
     }
 
-    public String getType() {
+    public int getType() {
         return type;
     }
 
-    public void setType(String type) {
+    public void setType(int type) {
         this.type = type;
     }
 
@@ -85,59 +87,59 @@ public class station_day_output {
         Pname = pname;
     }
 
-    public String getPay_money() {
+    public int getPay_money() {
         return pay_money;
     }
 
-    public void setPay_money(String pay_money) {
+    public void setPay_money(int pay_money) {
         this.pay_money = pay_money;
     }
 
-    public String getCounter_Fee() {
+    public int getCounter_Fee() {
         return counter_Fee;
     }
 
-    public void setCounter_Fee(String counter_Fee) {
+    public void setCounter_Fee(int counter_Fee) {
         this.counter_Fee = counter_Fee;
     }
 
-    public String getReal_output() {
+    public int getReal_output() {
         return real_output;
     }
 
-    public void setReal_output(String real_output) {
+    public void setReal_output(int real_output) {
         this.real_output = real_output;
     }
 
-    public String getBalance() {
+    public int getBalance() {
         return balance;
     }
 
-    public void setBalance(String balance) {
+    public void setBalance(int balance) {
         this.balance = balance;
     }
 
-    public String getTransaction_type() {
+    public int getTransaction_type() {
         return transaction_type;
     }
 
-    public void setTransaction_type(String transaction_type) {
+    public void setTransaction_type(int transaction_type) {
         this.transaction_type = transaction_type;
     }
 
-    public String getHas_invoice() {
+    public int getHas_invoice() {
         return has_invoice;
     }
 
-    public void setHas_invoice(String has_invoice) {
+    public void setHas_invoice(int has_invoice) {
         this.has_invoice = has_invoice;
     }
 
-    public String getPerson_in_charge() {
+    public int getPerson_in_charge() {
         return person_in_charge;
     }
 
-    public void setPerson_in_charge(String person_in_charge) {
+    public void setPerson_in_charge(int person_in_charge) {
         this.person_in_charge = person_in_charge;
     }
 }

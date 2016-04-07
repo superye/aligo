@@ -3,7 +3,6 @@ package com.fjnu.service;
 import com.fjnu.dao.FinanceDAO;
 import com.fjnu.dao.FinanceImpl;
 import com.fjnu.domain.ClassFire;
-import com.fjnu.domain.DayIncome;
 import com.fjnu.domain.station_day_output;
 import com.fjnu.domain.station_day_input;
 
