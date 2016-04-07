@@ -1,8 +1,7 @@
 package com.fjnu.dao;
 
 import com.fjnu.domain.ClassFire;
-import com.fjnu.domain.DayIncome;
-import com.fjnu.domain.IdleTime;
+import com.fjnu.domain.station_day_input;
 import org.apache.ibatis.session.SqlSession;
 
 import java.io.IOException;
@@ -32,9 +31,9 @@ public class FinanceImpl implements FinanceDAO {
     }
 
     @Override
-    public List<DayIncome> GetDayIncomeInfo() {
+    public List<station_day_input> GetDayIncomeInfo() {
         DBAccess dbAccess = new DBAccess();
-        List<DayIncome> list = new ArrayList<DayIncome>();
+        List<station_day_input> list = new ArrayList<station_day_input>();
         SqlSession sqlSession = null;
         try {
             sqlSession = dbAccess.getSqlSession();
