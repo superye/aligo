@@ -3,6 +3,7 @@ package com.fjnu.dao;
 import com.fjnu.domain.ClassFire;
 import com.fjnu.domain.DayIncome;
 import com.fjnu.domain.station_day_output;
+import com.fjnu.domain.station_day_input;
 
 import java.util.List;
 
@@ -13,4 +14,5 @@ public interface FinanceDAO {
     public List<ClassFire> GetClassConsume();
     public List<DayIncome> GetDayIncomeInfo();
     public List<station_day_output> GetDayOutputInfo();
+    public List<station_day_input> GetDayIncomeInfo();
 }

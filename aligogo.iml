@@ -15,6 +15,7 @@
           <fileset id="s2fileset" name="Default File Set " removed="false">
             <file>file://$MODULE_DIR$/src/struts.xml</file>
             <file>jar://$USER_HOME$/code/jar/struts基础包/struts2-core-2.3.24.jar!/struts-default.xml</file>
+            <file>jar://$MODULE_DIR$/../jar/struts2/struts2-core.jar!/struts-default.xml</file>
           </fileset>
           <propertiesKeys disabled="false" />
         </configuration>
@@ -32,5 +33,9 @@
     <orderEntry type="library" name="commons-beanutils-1.8.01" level="project" />
     <orderEntry type="library" name="commons-fileupload-1.3.11" level="project" />
     <orderEntry type="library" name="mysql-connector-java-5.1.7-bin" level="project" />
+    <orderEntry type="library" name="asm-commons" level="project" />
+    <orderEntry type="library" name="commons-beanutils-1.7.0" level="project" />
+    <orderEntry type="library" name="jsp-api" level="project" />
+    <orderEntry type="library" name="servlet-api" level="project" />
   </component>
 </module>

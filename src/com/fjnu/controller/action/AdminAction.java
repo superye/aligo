@@ -1,6 +1,5 @@
 package com.fjnu.controller.action;
 
-import com.fjnu.dao.SeatDAO;
 import com.fjnu.domain.*;
 import com.fjnu.service.*;
 import com.opensymphony.xwork2.ModelDriven;
@@ -201,7 +200,7 @@ public class AdminAction extends SuperAction implements ModelDriven<CoachStudent
     public String GetDayIncome() {
         DayIncome dayIncome = new DayIncome();
         GetFinanceService getFinanceService = new GetFinanceServiceImpl();
-        List<DayIncome> list = new ArrayList<>();
+        List<station_day_input> list = new ArrayList<station_day_input>();
         list = getFinanceService.GetDayIncomeInfo();
         request.setAttribute("dayincome", list);
         return "GetDayIncome";

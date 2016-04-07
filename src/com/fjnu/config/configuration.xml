@@ -28,5 +28,6 @@
         <mapper resource="com/fjnu/config/sqlxml/ClassFire.xml"/>
         <mapper resource="com/fjnu/config/sqlxml/DayIncome.xml"/>
         <mapper resource="com/fjnu/config/sqlxml/DayOutput.xml"/>
+        <mapper resource="com/fjnu/config/sqlxml/Station_day_input.xml"/>
     </mappers>
 </configuration>

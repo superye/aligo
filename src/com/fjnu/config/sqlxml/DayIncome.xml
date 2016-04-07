@@ -22,8 +22,8 @@
         <result column="brokerage" jdbcType="VARCHAR" property="brokerage"/>
     </resultMap>
 
-    <select id="SelectDayIncomeInfo" resultMap="DayIncomeResult">
-        SELECT * FROM day_income
+    <select id="SelectDayIncomeInfo" resultType="com.fjnu.domain.station_day_input">
+        SELECT * FROM t_station_day_input
     </select>
 
 </mapper>

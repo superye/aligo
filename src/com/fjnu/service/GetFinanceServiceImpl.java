@@ -5,6 +5,7 @@ import com.fjnu.dao.FinanceImpl;
 import com.fjnu.domain.ClassFire;
 import com.fjnu.domain.DayIncome;
 import com.fjnu.domain.station_day_output;
+import com.fjnu.domain.station_day_input;
 
 import java.util.List;
 
@@ -19,7 +20,7 @@ public class GetFinanceServiceImpl implements GetFinanceService {
     }
 
     @Override
-    public List<DayIncome> GetDayIncomeInfo() {
+    public List<station_day_input> GetDayIncomeInfo() {
         FinanceDAO financeDAO = new FinanceImpl();
         return financeDAO.GetDayIncomeInfo();
     }
