@@ -37,7 +37,7 @@ public class FinanceImpl implements FinanceDAO {
         SqlSession sqlSession = null;
         try {
             sqlSession = dbAccess.getSqlSession();
-            list = sqlSession.selectList("DayIncome.SelectDayIncomeInfo");
+            list = sqlSession.selectList("station_day_input.SelectDayInputInfo");
         }catch (IOException e) {
             e.printStackTrace();
         }finally {

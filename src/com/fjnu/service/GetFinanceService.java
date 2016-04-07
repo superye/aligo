@@ -1,7 +1,7 @@
 package com.fjnu.service;
 
 import com.fjnu.domain.ClassFire;
-import com.fjnu.domain.DayIncome;
+import com.fjnu.domain.station_day_input;
 
 import java.util.List;
 
@@ -10,5 +10,5 @@ import java.util.List;
  */
 public interface GetFinanceService {
     public List<ClassFire> GetClassConsumeInfo();
-    public List<DayIncome> GetDayIncomeInfo();
+    public List<station_day_input> GetDayIncomeInfo();
 }

@@ -117,16 +117,16 @@
         <tbody>
         <c:forEach var="list" items="${dayincome}">
             <tr>
-                <td>${list.getDate()}</td>
+                <td>${list.getTime()}</td>
                 <td>${list.getStationId()}</td>
                 <td>${list.getType()}</td>
-                <td>${list.getProductName()}</td>
-                <td>${list.getPrice()}</td>
-                <td>${list.getPoundage()}</td>
-                <td>${list.getReal_income()}</td>
+                <td>${list.getPname()}</td>
+                <td>${list.getPay_money()}</td>
+                <td>${list.getCounter_Fee()}</td>
+                <td>${list.getReal_input()}</td>
                 <td>${list.getBalance()}</td>
-                <td>${list.getPayType()}</td>
-                <td>${list.getBrokerage()}</td>
+                <td>${list.getTransactionType()}</td>
+                <td>${list.getPerson_in_charge()}</td>
             </tr>
         </c:forEach>
         </tbody>
