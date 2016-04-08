@@ -131,6 +131,8 @@ public class ChoosenImpl implements ChoosenDAO{
         try {
             sqlSession = dbAccess.getSqlSession();
             sqlSession.update("Choosen.ChangePayment", coachStudent);
+            for (int i = 0 ;i < 20; i++)
+                sqlSession.update("Choosen.InsertDetail", coachStudent.getId());
             sqlSession.commit();
         } catch (IOException e) {
             e.printStackTrace();

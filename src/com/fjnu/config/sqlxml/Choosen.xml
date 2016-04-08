@@ -119,6 +119,10 @@
         SELECT * from Coach_Student  WHERE ispay='0'
     </select>
     <update id="DeleteOrder" parameterType="int">
-       DELETE from Coach_Student where id=#{id}
+       UPDATE Coach_Student SET ispay=2 where id=#{id}
+    </update>
+
+    <update id="InsertDetail" parameterType="int">
+        INSERT INTO c_s_detail(is_finished, coa_stu_id) VALUES ('0', #{id})
     </update>
 </mapper>
