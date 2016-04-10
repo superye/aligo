@@ -122,7 +122,11 @@
        UPDATE Coach_Student SET ispay=2 where id=#{id}
     </update>
 
-    <update id="InsertDetail" parameterType="int">
-        INSERT INTO c_s_detail(is_finished, coa_stu_id) VALUES ('0', #{id})
+    <update id="InsertDetail" parameterType="com.fjnu.domain.CoachStudent">
+        INSERT INTO c_s_detail(is_finished, coa_stu_id, date) VALUES ('0', #{id}, #{start_day})
     </update>
+
+    <select id="GetOrder" parameterType="int" resultMap="UserChoosenResult">
+        SELECT * FROM Coach_Student WHERE id=#{id}
+    </select>
 </mapper>
