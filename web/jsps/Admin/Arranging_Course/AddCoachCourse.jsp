@@ -101,12 +101,12 @@
       <select class="form-control" id="cou_id" name="cou_id">
         <c:forEach items="${CourseList}" var="list">
           <option value="${list.getCou_id()}">
-              ${list.getCou_name()}
+              ${list.getCou_name()}(${list.getType()})
           </option>
         </c:forEach>
       </select>
     </div>
-    <br><br><br>
+
     <div class="form-group">
       <label for="price">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp价格：</label>
       <input type="number" id="price" name="price" placeholder="价格">

@@ -27,4 +27,6 @@ public interface GetMessageService {
     public int[][] GetSeatDetail(CoachStudent coachStudent);
 
     public List<CoachStudent> GetNopayOrder();
+
+    public int GetCoursePrice(CoachStudent coachStudent);
 }

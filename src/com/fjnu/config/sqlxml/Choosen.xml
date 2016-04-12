@@ -32,6 +32,7 @@
         <result column="classroom" jdbcType="VARCHAR" property="classroom"/>
         <result column="price" jdbcType="INTEGER" property="price"/>
         <result column="type" jdbcType="INTEGER" property="type"/>
+        <result column="leftcourse" javaType="INTEGER" property="leftcourse"/>
     </resultMap>
 
     <select id="GetChoosen" parameterType="com.fjnu.domain.User" resultMap="ChoosenResult">
@@ -105,8 +106,8 @@
     </select>
 
     <insert id="InsertMessage" parameterType="com.fjnu.domain.CoachStudent">
-        INSERT INTO Coach_Student(cou_id, cou_name, coa_id, stu_id, start_day, end_day, clazz, weekday, station, classroom, type, ispay)
-        VALUES (#{cou_id}, #{cou_name}, #{coa_id}, #{stu_id}, #{start_day}, #{end_day}, #{clazz}, #{weekday}, #{station}, #{classroom}, #{type},'0')
+        INSERT INTO Coach_Student(cou_id, cou_name, coa_id, stu_id, start_day, end_day, clazz, weekday, station, classroom, type, ispay, leftcourse)
+        VALUES (#{cou_id}, #{cou_name}, #{coa_id}, #{stu_id}, #{start_day}, #{end_day}, #{clazz}, #{weekday}, #{station}, #{classroom}, #{type},'0',20)
     </insert>
     <update id="DeleteChoosen" parameterType="com.fjnu.domain.CoachStudent">
         DELETE FROM Coach_Student WHERE cou_id=#{cou_id} AND stu_id=#{stu_id} AND coa_id=#{coa_id} AND weekday=#{weekday} AND clazz=#{clazz}

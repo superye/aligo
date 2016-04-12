@@ -80,9 +80,6 @@ public class AddMessageServiceImpl implements AddMessageService{
     //增加教师教授课程信息
     public boolean AddCoachCourse(CoachCourse coachCourse) {
         CoachCourseDAO coachCourseDAO = new CoachCourseImpl();
-        if (coachCourse.getPrice() == null || coachCourse.getPrice().length() == 0) {
-            coachCourse.setPrice("0");
-        }
         boolean flag = coachCourseDAO.InsertMessage(coachCourse);
         return flag;
     }

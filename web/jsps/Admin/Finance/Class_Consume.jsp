@@ -136,9 +136,11 @@
         <table class="table table-bordered">
             <thead>
             <tr>
-                <th>月份</th>
+                <th>订单id</th>
                 <th>学生编号</th>
                 <th>学生姓名</th>
+                <th>Coach ID</th>
+                <th>Coach姓名</th>
                 <th>所报课程</th>
                 <th>报名课时（H/次/天）</th>
                 <th>所交费用</th>
@@ -147,32 +149,26 @@
                 <th>课时消耗（H/次/天）</th>
                 <th>课消费用</th>
                 <th>类别</th>
-                <th>扣除餐费后</th>
-                <th>提成比例</th>
-                <th>提成</th>
-                <th>明细</th>
             </tr>
             </thead>
             <tbody>
-            <c:forEach var="list" items="${classconsume}">
-            <tr>
-                <td>${list.getDate()}</td>
-                <td>${list.getName()}</td>
-                <td>${list.getStu_id()}</td>
-                <td>${list.getClazz()}</td>
-                <td>${list.getPeriod()}</td>
-                <td>${list.getPay()}</td>
-                <td>${list.getIncome()}</td>
-                <td>${list.getUnit_price()}</td>
-                <td>${list.getConsume_time()}</td>
-                <td>${list.getConsume_price()}</td>
-                <td>${list.getKind()}</td>
-                <td>${list.getReal_price()}</td>
-                <td>${list.getPer_cmn()}</td>
-                <td>${list.getCmn()}</td>
-                <td><a href="#">详细</a></td>
-            </tr>
-            </c:forEach>
+                <c:forEach items="${consumeList}" var="list">
+                    <tr>
+                        <td>${list.getId()}</td>
+                        <td>${list.getStu_id()}</td>
+                        <td>${list.getStu_name()}</td>
+                        <td>${list.getCoa_id()}</td>
+                        <td>${list.getCoa_name()}
+                        <td>${list.getCou_name()}</td>
+                        <td>20</td>
+                        <td>${list.getPrice() * 20}</td>
+                        <td>${list.getPrice() * 20}</td>
+                        <td>${list.getPrice()}</td>
+                        <td>${20-list.getLeftcourse()}</td>
+                        <td>${(20-list.getLeftcourse()) * list.getPrice()}</td>
+                        <td>${list.getType()}</td>
+                    </tr>
+                </c:forEach>
             </tbody>
 
         </table>

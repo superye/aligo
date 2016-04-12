@@ -81,4 +81,8 @@
         DELETE FROM Coach_Course WHERE coa_id=#{coa_id} AND cou_id=#{cou_id}
     </update>
 
+    <select id="GetCoursePrice" parameterType="com.fjnu.domain.CoachStudent" resultType="int">
+        SELECT price FROM Coach_Course where coa_id=#{coa_id} AND cou_id=#{cou_id}
+    </select>
+
 </mapper>

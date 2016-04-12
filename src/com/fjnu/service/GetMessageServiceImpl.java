@@ -195,4 +195,13 @@ public class GetMessageServiceImpl implements GetMessageService {
 
         return list;
     }
+
+    @Override
+    public int GetCoursePrice(CoachStudent coachStudent) {
+        List<Integer> list = new ArrayList<>();
+        GetCourseDAO getCourseDAO = new GetCourseImpl();
+        list = getCourseDAO.GetCoursePrice(coachStudent);
+
+        return list.get(0);
+    }
 }

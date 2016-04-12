@@ -18,8 +18,17 @@ public class CoachStudent {
     private String station;
     private String classroom;
     private String type;
-    private String price;
+    private int price;
+    private int leftcourse;
     private int page;
+
+    public int getLeftcourse() {
+        return leftcourse;
+    }
+
+    public void setLeftcourse(int leftcourse) {
+        this.leftcourse = leftcourse;
+    }
 
     public int getId() {
         return id;
@@ -29,11 +38,11 @@ public class CoachStudent {
         this.id = id;
     }
 
-    public String getPrice() {
+    public int getPrice() {
         return price;
     }
 
-    public void setPrice(String price) {
+    public void setPrice(int price) {
         this.price = price;
     }
 
