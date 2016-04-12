@@ -1,10 +1,6 @@
 package com.fjnu.dao;
 
-import com.fjnu.domain.ClassFire;
-import com.fjnu.domain.DayIncome;
-import com.fjnu.domain.IdleTime;
-import com.fjnu.domain.station_day_output;
-import com.fjnu.domain.station_day_input;
+import com.fjnu.domain.*;
 import org.apache.ibatis.session.SqlSession;
 
 import java.io.IOException;
@@ -59,6 +55,24 @@ public class FinanceImpl implements FinanceDAO {
         try {
             sqlSession = dbAccess.getSqlSession();
             list = sqlSession.selectList("DayOutput.SelectDayOutputInfo");
+        }catch (IOException e) {
+            e.printStackTrace();
+        }finally {
+            if (sqlSession != null) {
+                sqlSession.close();
+            }
+        }
+        return list;
+    }
+
+    @Override
+    public List<Salary> GetSalaryInfo() {
+        DBAccess dbAccess = new DBAccess();
+        List<Salary> list = new ArrayList<Salary>();
+        SqlSession sqlSession = null;
+        try {
+            sqlSession = dbAccess.getSqlSession();
+            list = sqlSession.selectList("Salary.SelectSalaryInfo");
         }catch (IOException e) {
             e.printStackTrace();
         }finally {

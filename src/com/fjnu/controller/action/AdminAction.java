@@ -214,5 +214,14 @@ public class AdminAction extends SuperAction implements ModelDriven<CoachStudent
         request.setAttribute("dayoutput", list);
         return "GetDayOutput";
     }
+
+    public String GetSalary() {
+        Salary salary = new Salary();
+        GetFinanceService getFinanceService = new GetFinanceServiceImpl();
+        List<Salary> list = new ArrayList<>();
+        list = getFinanceService.GetSalaryInfo();
+        request.setAttribute("salary", list);
+        return "GetSalary";
+    }
     public CoachStudent getModel() { return coachStudent; }
 }

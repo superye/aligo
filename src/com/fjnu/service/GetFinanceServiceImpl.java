@@ -3,6 +3,7 @@ package com.fjnu.service;
 import com.fjnu.dao.FinanceDAO;
 import com.fjnu.dao.FinanceImpl;
 import com.fjnu.domain.ClassFire;
+import com.fjnu.domain.Salary;
 import com.fjnu.domain.station_day_output;
 import com.fjnu.domain.station_day_input;
 
@@ -22,6 +23,12 @@ public class GetFinanceServiceImpl implements GetFinanceService {
     public List<station_day_input> GetDayIncomeInfo() {
         FinanceDAO financeDAO = new FinanceImpl();
         return financeDAO.GetDayIncomeInfo();
+    }
+
+    @Override
+    public List<Salary> GetSalaryInfo() {
+        FinanceDAO financeDAO = new FinanceImpl();
+        return financeDAO.GetSalaryInfo();
     }
 
     @Override

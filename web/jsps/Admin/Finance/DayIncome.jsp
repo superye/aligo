@@ -49,7 +49,7 @@
                     <ul class="dropdown-menu" role="menu">
                         <li><a href="admin_GetPALInfo.action" data-tab="tab-chrome">查看每月收支</a></li>
                         <li><a href="admin_GetDayIncome.action" data-tab="tab-firefox">每日收支管理</a></li>
-                        <li><a href="#feature-tab" data-tab="tab-firefox">薪资管理</a></li>
+                        <li><a href="admin_GetSalary.action">薪资管理</a></li>
                         <li><a href="admin_GetClassConsume.action" data-tab="tab-chrome">课消及提成管理</a></li>
                         <li><a href="admin_Payment.action" data-tab="tab-firefox">课程收费标准管理</a></li>
                     </ul>
@@ -80,7 +80,7 @@
     <ul class="nav nav-tabs" role="tablist">
         <li><a href="admin_GetPayInfo.action">查看每月支出</a></li>
         <li class="active"><a href="admin_GetDayIncome.action">每日收支管理</a></li>
-        <li><a href="#C" role="tab" data-toggle="tab">薪资管理</a></li>
+        <li><a href="admin_GetSalary.action">薪资管理</a></li>
         <li><a href="admin_GetClassConsume.action">课消及提成管理</a></li>
         <li><a href="admin_Payment.action">课程收费标准管理</a></li>
     </ul>
@@ -92,6 +92,9 @@
             <ul class="nav nav-pills">
                 <li role="presentation" class="active"><a href="admin_GetDayIncome.action">每日收入管理</a></li>
                 <li role="presentation"><a href="admin_GetDayOutput.action">每日支出管理</a></li>
+                <div  style="text-align: right;">
+                    <button type="submit" class="btn btn-default">新增</button>
+                </div>
             </ul>
         </div>
     </div>
@@ -118,14 +121,14 @@
         <c:forEach var="list" items="${dayincome}">
             <tr>
                 <td>${list.getTime()}</td>
-                <td>${list.getStationId()}</td>
+                <td>${list.getStation_name()}</td>
                 <td>${list.getType()}</td>
                 <td>${list.getPname()}</td>
                 <td>${list.getPay_money()}</td>
                 <td>${list.getCounter_Fee()}</td>
                 <td>${list.getReal_input()}</td>
                 <td>${list.getBalance()}</td>
-                <td>${list.getTransactionType()}</td>
+                <td>${list.getTransaciton_type()}</td>
                 <td>${list.getPerson_in_charge()}</td>
             </tr>
         </c:forEach>

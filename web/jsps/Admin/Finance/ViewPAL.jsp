@@ -49,7 +49,7 @@
                     <ul class="dropdown-menu" role="menu">
                         <li><a href="admin_GetPALInfo.action" data-tab="tab-chrome">查看每月收支</a></li>
                         <li><a href="admin_GetDayIncome.action" data-tab="tab-firefox">每日收支管理</a></li>
-                        <li><a href="#feature-tab" data-tab="tab-firefox">薪资管理</a></li>
+                        <li><a href="admin_GetSalary.action">薪资管理</a></li>
                         <li><a href="admin_GetClassConsume.action" data-tab="tab-chrome">课消及提成管理</a></li>
                         <li><a href="admin_Payment.action" data-tab="tab-firefox">课程收费标准管理</a></li>
                     </ul>
@@ -80,7 +80,7 @@
     <ul class="nav nav-tabs" role="tablist">
         <li class="active"><a href="admin_GetPALInfo.action">查看每月盈亏</a></li>
         <li><a href="admin_GetDayIncome.action">每日收支管理</a></li>
-        <li><a href="#C" role="tab" data-toggle="tab">薪资管理</a></li>
+        <li><a href="admin_GetSalary.action">薪资管理</a></li>
         <li><a href="admin_GetClassConsume.action">课消及提成管理</a></li>
         <li><a href="admin_Payment.action">学生收费管理</a></li>
     </ul>
