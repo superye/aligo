@@ -10,5 +10,5 @@ import com.fjnu.domain.User;
  * 处理登陆相关的服务
  */
 public interface LoginService {
-    public boolean check(User user);
+    public boolean check(User user) throws Exception;
 }

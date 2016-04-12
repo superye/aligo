@@ -3,6 +3,7 @@ package com.fjnu.controller.action;
 import com.fjnu.domain.*;
 import com.fjnu.service.*;
 import com.opensymphony.xwork2.ModelDriven;
+import com.sun.scenario.effect.impl.sw.sse.SSEBlend_SRC_OUTPeer;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -72,6 +73,7 @@ public class AdminAction extends SuperAction implements ModelDriven<CoachStudent
             schedule = getMessageService.GetSchedule(coachStudent);
         }
         TimeTable timeTable = new TimeTable();
+
         request.setAttribute("name", getMessageService.GetUserName(coachStudent.getStu_id()));
         request.setAttribute("List", schedule.getCSschedule());
         request.setAttribute("TimeList", timeTable);
@@ -189,12 +191,32 @@ public class AdminAction extends SuperAction implements ModelDriven<CoachStudent
     }
 
     public String GetClassConsume() {
+        System.out.println("here");
+        List<CoachStudent> list = new ArrayList<>();
+        GetMessageService getMessageService = new GetMessageServiceImpl();
+        /*
+        if (coachStudent.getStu_id() != null && !coachStudent.getStu_id().equals("")) {
+            list = getMessageService.GetStudentCourse(coachStudent);
+        }
+        */
+        list = getMessageService.GetStudentCourse(coachStudent);
+        for (int i = 0; i < list.size(); i++) {
+            list.get(i).setStu_name(getMessageService.GetUserName(list.get(i).getStu_id()));
+            list.get(i).setCoa_name(getMessageService.GetUserName(list.get(i).getCoa_id()));
+            list.get(i).setPrice(getMessageService.GetCoursePrice(list.get(i)));
+
+            System.out.println(list.get(i).getId());
+        }
+        request.setAttribute("consumeList", list);
+        return "GetClassConsume";
+        /*
         ClassFire classfire = new ClassFire();
         GetFinanceService getFinanceService = new GetFinanceServiceImpl();
         List<ClassFire> list = new ArrayList<>();
         list = getFinanceService.GetClassConsumeInfo();
         request.setAttribute("classconsume", list);
         return "GetClassConsume";
+        */
     }
 
     public String GetDayIncome() {

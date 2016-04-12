@@ -4,13 +4,6 @@
     <entry_points version="2.0" />
   </component>
   <component name="IdProvider" IDEtalkID="C57AFEE75FD0DFF5CCFF3A69005B2478" />
-  <component name="MavenImportPreferences">
-    <option name="generalSettings">
-      <MavenGeneralSettings>
-        <option name="mavenHome" value="Bundled (Maven 3)" />
-      </MavenGeneralSettings>
-    </option>
-  </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
       <profile-state>

@@ -3,10 +3,13 @@ package com.fjnu.dao;
 import com.fjnu.domain.Choosen;
 import com.fjnu.domain.CoachStudent;
 import com.fjnu.domain.User;
+import com.fjnu.utils.TimeSet;
 import org.apache.ibatis.session.SqlSession;
 
 import java.io.IOException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -130,9 +133,20 @@ public class ChoosenImpl implements ChoosenDAO{
         SqlSession sqlSession = null;
         try {
             sqlSession = dbAccess.getSqlSession();
+            List<CoachStudent> list = new ArrayList<>();
+            SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+            list = sqlSession.selectList("Choosen.GetOrder", coachStudent.getId());
+            int clazz = Integer.parseInt(list.get(0).getClazz());
+            int weekday = Integer.parseInt(list.get(0).getWeekday());
+
+            List<Date> dates = new ArrayList<>();
+            TimeSet timeSet = new TimeSet();
+            dates = timeSet.GetTime(weekday,clazz);
             sqlSession.update("Choosen.ChangePayment", coachStudent);
-            for (int i = 0 ;i < 20; i++)
-                sqlSession.update("Choosen.InsertDetail", coachStudent.getId());
+            for (int i = 0 ;i < 20; i++) {
+                coachStudent.setStart_day(df.format(dates.get(i)));
+                sqlSession.update("Choosen.InsertDetail", coachStudent);
+            }
             sqlSession.commit();
         } catch (IOException e) {
             e.printStackTrace();
@@ -176,4 +190,6 @@ public class ChoosenImpl implements ChoosenDAO{
         }
         return true;
     }
+
+
 }

@@ -8,7 +8,7 @@ public class CoachCourse {
     private String coa_name;
     private String cou_id;
     private String cou_name;
-    private String price;
+    private int price;
     private String station;
 
     public String getStation() {
@@ -51,11 +51,11 @@ public class CoachCourse {
         this.cou_id = cou_id;
     }
 
-    public String getPrice() {
+    public int getPrice() {
         return price;
     }
 
-    public void setPrice(String price) {
+    public void setPrice(int price) {
         this.price = price;
     }
 }
