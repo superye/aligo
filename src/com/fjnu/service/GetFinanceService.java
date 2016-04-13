@@ -15,4 +15,6 @@ public interface GetFinanceService {
     public List<station_day_output> GetDayOutputInfo();
     public List<station_day_input> GetDayIncomeInfo();
     public List<Salary> GetSalaryInfo();
+    public boolean InsertDayInput(station_day_input sdi);
+    public boolean InsertDayOutput(station_day_output sdo);
 }
