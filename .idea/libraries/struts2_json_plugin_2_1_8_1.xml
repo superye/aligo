@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="struts2-json-plugin-2.1.8.1">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../jar/struts2-json-plugin-2.1.8.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../jar/standard.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../jar/servlet-api.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../jar/mybatis-3.2.8.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../jar/jstl.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
