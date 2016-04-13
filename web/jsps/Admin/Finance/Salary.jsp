@@ -100,7 +100,7 @@
 
 
 <div id="table1" class="table-responsive">
-    <table class="table table-bordered">
+    <table class="table table-bordered table-layout:fixed;"style="width: auto;">
         <thead>
         <tr>
             <th>月份</th>
@@ -135,41 +135,77 @@
 
         </tr>
         </thead>
-        <tbody>
-        <c:forEach var="list" items="${salary}">
-            <tr>
-                <td>${list.getYuefen()}</td>
-                <td>${list.getYuangongbianhao()}</td>
-                <td>${list.getYuangongxingming()}</td>
-                <td>${list.getLeibie()}</td>
-                <td>${list.getGongzuoleixing()}</td>
-                <td>${list.getShenfenzhonghao()}</td>
-                <td>${list.getNonghangkahao()}</td>
-                <td>${list.getJianhangkahao()}</td>
-                <td>${list.getQipinshijian()}</td>
-                <td>${list.getA1_jibenxinzi()}</td>
-                <td>${list.getA2_zhuanyejintie()}</td>
-                <td>${list.getA3_xiaojijintie()}</td>
-                <td>${list.getA4_ganbuguanli()}</td>
-                <td>${list.getA5_qitqjintie()}</td>
-                <td>${list.getA6_xianjinfuli()}</td>
-                <td>${list.getXinziheji()}</td>
-                <td>${list.getB1_xianjinfuli()}</td>
-                <td>${list.getXianjinsuode()}}</td>
-                <td>${list.getC1_manqin()}</td>
-                <td>${list.getC2_yejiticheng()}</td>
-                <td>${list.getC3_yuefenxinzi()}</td>
-                <td>${list.getD_fulizonge()}</td>
-                <td>${list.getE1_banyuegongzi()}</td>
-                <td>${list.getQueqintianshu()}</td>
-                <td>${list.getE2_queqinkouxin()}</td>
-                <td>${list.getXianjindaijiao()}</td>
-                <td>${list.getF_shilingxinzi()}</td>
-                <td>${list.getXuexiaofu()}</td>
-                <td>${list.getGongsifu()}</td>
 
-            </tr>
-        </c:forEach>
+        <tbody>
+
+        <%--<tr>--%>
+            <%--<td>2015-11</td>--%>
+            <%--<td>001</td>--%>
+            <%--<td>刘萌</td>--%>
+            <%--<td>总务</td>--%>
+            <%--<td>实习</td>--%>
+            <%--<td>3501821990xxxxxxxx</td>--%>
+            <%--<td>6217xxxxxxxxx</td>--%>
+            <%--<td>3100xxxxxxxx</td>--%>
+            <%--<td>2014-12-21</td>--%>
+            <%--<td>2000</td>--%>
+            <%--<td>0</td>--%>
+            <%--<td>0</td>--%>
+            <%--<td>0</td>--%>
+            <%--<td>0</td>--%>
+            <%--<td>0</td>--%>
+            <%--<td>0</td>--%>
+            <%--<td>0</td>--%>
+            <%--<td>0</td>--%>
+            <%--<td>0</td>--%>
+            <%--<td>0</td>--%>
+            <%--<td>0</td>--%>
+            <%--<td>0</td>--%>
+            <%--<td>0</td>--%>
+            <%--<td>0</td>--%>
+            <%--<td>0</td>--%>
+            <%--<td>0</td>--%>
+            <%--<td>0</td>--%>
+            <%--<td>2000</td>--%>
+            <%--<td>0</td>--%>
+
+        <%--</tr>--%>
+
+        <%--<c:forEach var="list" items="${salary}">--%>
+            <%--<tr>--%>
+                <%--<td>${list.getYuefen()}</td>--%>
+                <%--<td>${list.getYuangongbianhao()}</td>--%>
+                <%--<td>${list.getYuangongxingming()}</td>--%>
+                <%--<td>${list.getLeibie()}</td>--%>
+                <%--<td>${list.getGongzuoleixing()}</td>--%>
+                <%--<td>${list.getShenfenzhonghao()}</td>--%>
+                <%--<td>${list.getNonghangkahao()}</td>--%>
+                <%--<td>${list.getJianhangkahao()}</td>--%>
+                <%--<td>${list.getQipinshijian()}</td>--%>
+                <%--<td>${list.getA1_jibenxinzi()}</td>--%>
+                <%--<td>${list.getA2_zhuanyejintie()}</td>--%>
+                <%--<td>${list.getA3_xiaojijintie()}</td>--%>
+                <%--<td>${list.getA4_ganbuguanli()}</td>--%>
+                <%--<td>${list.getA5_qitqjintie()}</td>--%>
+                <%--<td>${list.getA6_xianjinfuli()}</td>--%>
+                <%--<td>${list.getXinziheji()}</td>--%>
+                <%--<td>${list.getB1_xianjinfuli()}</td>--%>
+                <%--<td>${list.getXianjinsuode()}}</td>--%>
+                <%--<td>${list.getC1_manqin()}</td>--%>
+                <%--<td>${list.getC2_yejiticheng()}</td>--%>
+                <%--<td>${list.getC3_yuefenxinzi()}</td>--%>
+                <%--<td>${list.getD_fulizonge()}</td>--%>
+                <%--<td>${list.getE1_banyuegongzi()}</td>--%>
+                <%--<td>${list.getQueqintianshu()}</td>--%>
+                <%--<td>${list.getE2_queqinkouxin()}</td>--%>
+                <%--<td>${list.getXianjindaijiao()}</td>--%>
+                <%--<td>${list.getF_shilingxinzi()}</td>--%>
+                <%--<td>${list.getXuexiaofu()}</td>--%>
+                <%--<td>${list.getGongsifu()}</td>--%>
+
+            <%--</tr>--%>
+        <%--</c:forEach>--%>
+
         <!--
         <tr>
             <td>2015-11</td>
