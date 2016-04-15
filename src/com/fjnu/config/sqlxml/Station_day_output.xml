@@ -7,7 +7,7 @@
 
 <mapper namespace="station_day_output">
         <update id="InsertDayOutputInfo" parameterType="com.fjnu.domain.station_day_output">
-             INSERT INTO t_station_day_output(apply_id, station_id, payer_id, time, type, Pname, pay_money, counter_Fee, real_output, balance, transaction_type, has_invoice, person_in_charge)
-             VALUES (#{apply_id}, #{station_id}, #{payer_id}, #{time}, #{type}, #{Pname}, #{pay_money}, #{counter_Fee}, #{real_output}, #{balance}, #{transaction_type}, #{has_invoice}, #{person_in_charge});
+             INSERT INTO t_station_day_output(apply_id, station_id, User_id, time, type, Pname, pay_money, counter_Fee, real_output, balance, transaction_type, has_invoice, person_in_charge)
+             VALUES (#{apply_id}, #{station_id}, #{User_id}, #{time}, #{type}, #{Pname}, #{pay_money}, #{counter_Fee}, #{real_output}, #{balance}, #{transaction_type}, #{has_invoice}, #{person_in_charge});
         </update>
 </mapper>
