@@ -41,6 +41,7 @@ public class AddMessageServiceImpl implements AddMessageService{
 
         GetMessageService getMessageService = new GetMessageServiceImpl();
         int classroom = getMessageService.GetMinClassroom(list.get(0));
+
         list.get(0).setClassroom(String.valueOf(classroom));
 
         return list.get(0);
@@ -80,7 +81,8 @@ public class AddMessageServiceImpl implements AddMessageService{
     //增加教师教授课程信息
     public boolean AddCoachCourse(CoachCourse coachCourse) {
         CoachCourseDAO coachCourseDAO = new CoachCourseImpl();
-        boolean flag = coachCourseDAO.InsertMessage(coachCourse);
+        boolean flag = true;
+        flag = coachCourseDAO.InsertMessage(coachCourse);
         return flag;
     }
 

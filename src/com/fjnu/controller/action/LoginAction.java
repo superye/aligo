@@ -22,6 +22,7 @@ public class LoginAction extends SuperAction implements ModelDriven<User>{
     public String execute() throws Exception {
         LoginServiceImpl loginService = new LoginServiceImpl();
         GetMessageService getMessageService = new GetMessageServiceImpl();
+        session.setAttribute("LoginPassword", user.getPassword());
         if (loginService.check(user)) {
             String Name = getMessageService.GetUserName(user.getUsername());
             session.setAttribute("LoginName", Name);

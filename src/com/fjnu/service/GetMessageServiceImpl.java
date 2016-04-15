@@ -122,9 +122,17 @@ public class GetMessageServiceImpl implements GetMessageService {
         for (int i = 0; i < list.size(); i++) {
            state[list.get(i)]++;
         }
-        int CNum = seatDAO.GetClassroomNum(coachStudent.getStation());
         int ans = 100;
         int Min = -1;
+        int CNum;
+        if (coachStudent.equals("Online")) {
+            for (int i = 1; i <= 100; i++) {
+                if (state[i] == 0) {
+                    return i;
+                }
+            }
+        }
+        CNum = seatDAO.GetClassroomNum(coachStudent.getStation());
         for (int i = 1; i <= CNum; i++) {
             if (state[i] < ans) {
                 ans = state[i];

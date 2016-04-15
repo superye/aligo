@@ -106,72 +106,72 @@
   </div>
 </div>
 
-  <form action="" method="get" class="formstyle">
+  <form action="admin_InsertDayOutput.action" method="get" class="formstyle">
 
     <div class="row">
       <div class="col-lg-6">
         <label for="apply_id">申请单编号</label>
-        <input type="text" class="form-control"  name="apply_id" id="apply_id" placeholder="申请单编号">
+        <input type="text" class="form-control"  name="station_day_output.apply_id" id="apply_id" placeholder="申请单编号">
       </div>
       <div class="col-lg-6">
         <label for="station_id">站点</label>
-        <input type="text" class="form-control" id="station_id" name="station_id" placeholder="站点">
+        <input type="text" class="form-control" id="station_id" name="station_day_output.station_id" placeholder="站点">
       </div>
     </div>
     <div class="row">
       <div class="col-lg-6">
         <label for="user_id">支用人ＩＤ</label>
-        <input type="text" class="form-control" id="user_id" name="user_id" placeholder="支用人ＩＤ">
+        <input type="text" class="form-control" id="user_id" name="station_day_output.user_id" placeholder="支用人ＩＤ">
       </div>
       <div class="col-lg-6">
         <label for="time">日期</label>
-        <input type="date" class="form-control" id="time" name="time" placeholder="年/月/日">
+        <input type="date" class="form-control" id="time" name="station_day_output.time" placeholder="年/月/日">
       </div>
     </div>
     <div class="row">
       <div class="col-lg-6">
         <label for="type">类别</label>
-        <input type="text" class="form-control" id="type" name="type" placeholder="类别">
+        <input type="text" class="form-control" id="type" name="station_day_output.type" placeholder="类别">
       </div>
       <div class="col-lg-6">
         <label for="Pname">品名</label>
-        <input type="text" class="form-control" id="Pname" name="Pname" placeholder="品名">
+        <input type="text" class="form-control" id="Pname" name="station_day_output.Pname" placeholder="品名">
       </div>
     </div>
     <div class="row">
       <div class="col-lg-6">
         <label for="pay_money">支出金额</label>
-        <input type="text" class="form-control" id="pay_money" name="pay_money" placeholder="支出金额">
+        <input type="text" class="form-control" id="pay_money" name="station_day_output.pay_money" placeholder="支出金额">
       </div>
       <div class="col-lg-6">
         <label for="counter_Fee">手续费</label>
-        <input type="text" class="form-control" id="counter_Fee" name="counter_Fee" placeholder="手续费">
+        <input type="text" class="form-control" id="counter_Fee" name="station_day_output.counter_Fee" placeholder="手续费">
       </div>
     </div>
     <div class="row">
       <div class="col-lg-6">
         <label for="real_output">实际支出</label>
-        <input type="text" class="form-control" id="real_output" name="real_output" placeholder="实际支出">
+        <input type="text" class="form-control" id="real_output" name="station_day_output.real_output" placeholder="实际支出">
       </div>
       <div class="col-lg-6">
         <label for="balance">余额</label>
-        <input type="text" class="form-control" id="balance" name="balance" placeholder="余额">
+        <input type="text" class="form-control" id="balance" name="station_day_output.balance" placeholder="余额">
       </div>
     </div>
     <div class="row">
       <div class="col-lg-6">
         <label for=" transaciton_type">交易类型</label>
-        <input type="text" class="form-control" id=" transaciton_type" name="transaction_type" placeholder="交易类型">
+        <input type="text" class="form-control" id=" transaciton_type" name="station_day_output.transaction_type" placeholder="交易类型">
       </div>
       <div class="col-lg-6">
         <label for="has_invoice">有无发票</label>
-        <input type="text" class="form-control" id="has_invoice" name="has_invoice" placeholder="有无发票">
+        <input type="text" class="form-control" id="has_invoice" name="station_day_output.has_invoice" placeholder="有无发票">
       </div>
     </div>
     <div class="row">
       <div class="col-lg-6">
         <label for="person_in_charge">经手人ＩＤ</label>
-        <input type="text" class="form-control" id="person_in_charge" name="person_in_charge" placeholder="经手人ＩＤ">
+        <input type="text" class="form-control" id="person_in_charge" name="station_day_output.person_in_charge" placeholder="经手人ＩＤ">
       </div>
       <div class="col-lg-2 col-lg-offset-2" style="padding-top:20px">
         <button type="submit" class="btn btn-default">新增</button>

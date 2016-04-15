@@ -32,7 +32,7 @@
       the.text = '〇';
       the.onclick = function() {deleteIdle(coa_id, weekday, clazz, the)};
       var idA = "A"+weekday+"#"+clazz;
-      $("td[id="+idA+"]").css("background-color", "#7fffd4");
+      $("td[id="+idA+"]").css("background-color", "#CCFFFF");
 
       var urlA = "http://localhost:8080/coach_InsertIdletime.action";
       var dataA = "coa_id=" + coa_id + "&weekday=" + weekday + "&clazz=" + clazz;
@@ -51,7 +51,7 @@
       the.onclick = function() {addIdle(coa_id, weekday, clazz, the);};
 
       var idD = "D"+weekday+"#"+clazz;
-      $("td[id="+idD+"]").css("background-color", "#ff6347");
+      $("td[id="+idD+"]").css("background-color", "#CCCCCC");
 
 
       var urlD = "http://localhost:8080/coach_DeleteIdletime.action";
@@ -135,7 +135,7 @@
           <td class="time">${TimeList.getTime()[i]}</td>
           <c:forEach var="j" begin="1" end="7">
             <c:if test="${CourseList[j][i] != null}">
-              <td bgcolor="#f0ffff">
+              <td bgcolor="#CCFF99">
                 <a class="tishi">${CourseList[j][i].getCou_name()}
                    <span>
                      <div>学生: ${CourseList[j][i].getStu_name()}</div>
@@ -148,7 +148,7 @@
             </c:if>
             <c:if test="${CourseList[j][i] == null}">
               <c:if test="${IdleList[j][i] == null}">
-                <td bgcolor="#ff6347" id="A${j}#${i}">
+                <td bgcolor="#CCCCCC" id="A${j}#${i}">
                   <div style="text-align: center">
                     <!--
                     <a href="coach_InsertIdletime.action?coa_id=${LoginId}&weekday=${j}&clazz=${i}">×</a>
@@ -158,7 +158,7 @@
                 </td>
               </c:if>
               <c:if test="${IdleList[j][i] != null}">
-                <td bgcolor="#7fffd4" id="D${j}#${i}">
+                <td bgcolor="#CCFFFF" id="D${j}#${i}">
                   <div style="text-align: center">
                     <!--
                     <a href="coach_DeleteIdletime.action?coa_id=${LoginId}&weekday=${j}&clazz=${i}">〇</a>

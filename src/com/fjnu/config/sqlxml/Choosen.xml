@@ -91,6 +91,7 @@
         AND end_day > #{end_day}
         AND weekday = #{weekday}
         AND clazz = #{clazz}
+        AND type = #{type}
     </select>
 
     <select id="GetAllChoosen" parameterType="com.fjnu.domain.CoachStudent" resultMap="UserChoosenResult">
