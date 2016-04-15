@@ -7,7 +7,6 @@
     %>
     <meta name="viewpo<%@ page contentType="text/html;charset=UTF-8" language="java" %>rt" content="width=device-width, initial-scale=1">
     <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Aligo-Admin-财务管理/薪资管理/查看员工薪资</title>
     <link href="<%=basePath%>resource/css/bootstrap.min.css" rel="stylesheet">
