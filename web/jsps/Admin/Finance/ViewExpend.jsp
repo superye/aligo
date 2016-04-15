@@ -34,12 +34,11 @@
         </div>
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
-                <li class="dropdown"><a href="#ad-carousel">课程管理</a></li>
+                <li class="dropdown"><a href="admin_LoadCoachCourse.action">课程管理</a></li>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">座位管理 <span class="caret"></span></a>
                     <ul class="dropdown-menu" role="menu">
                         <li><a href="admin_GetSeatInfo.action" data-tab="tab-chrome">查看座位资源</a></li>
-                        <li><a href="#feature-tab" data-tab="tab-firefox">维护座位资源</a></li>
                     </ul>
                 </li>
                 <li class="active">
