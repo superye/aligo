@@ -3,7 +3,6 @@ package com.fjnu.controller.action;
 import com.fjnu.domain.*;
 import com.fjnu.service.*;
 import com.opensymphony.xwork2.ModelDriven;
-import com.sun.scenario.effect.impl.sw.sse.SSEBlend_SRC_OUTPeer;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -14,6 +13,16 @@ import java.util.List;
  */
 public class AdminAction extends SuperAction implements ModelDriven<CoachStudent>{
     CoachStudent coachStudent = new CoachStudent();
+    station_day_output sdo = new station_day_output();
+    station_day_input sdi = new station_day_input();
+
+    public void setSdo(station_day_output s) {
+        this.sdo = s;
+    }
+
+    public void setSdi(station_day_input s) {
+        this.sdi = s;
+    }
 
     //加载Coach与课程的对应
     public String LoadCoachCourse() {
@@ -245,5 +254,18 @@ public class AdminAction extends SuperAction implements ModelDriven<CoachStudent
         request.setAttribute("salary", list);
         return "GetSalary";
     }
+
+    public String InsertDayOutput() {
+        GetFinanceService getFinanceService = new GetFinanceServiceImpl();
+        getFinanceService.InsertDayOutput(sdo);
+        return "InsertDayOutput";
+    }
+
+    public String InsertDayInput() {
+        GetFinanceService getFinanceService = new GetFinanceServiceImpl();
+        getFinanceService.InsertDayInput(sdi);
+        return "InsertDayInput";
+    }
+
     public CoachStudent getModel() { return coachStudent; }
 }

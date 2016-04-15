@@ -1,5 +1,7 @@
 package com.fjnu.utils;
 
+import sun.misc.BASE64Encoder;
+
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 

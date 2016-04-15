@@ -91,6 +91,9 @@
             <ul class="nav nav-pills">
                 <li role="presentation"><a href="admin_GetDayIncome.action">每日收入管理</a></li>
                 <li role="presentation" class="active"><a href="admin_GetDayOutput.action">每日支出管理</a></li>
+                <div  style="text-align: right;">
+                    <button type="submit" class="btn btn-default"><a href="jsps/Admin/Finance/AddDayOutput.jsp">新增</a></button>
+                </div>
             </ul>
         </div>
     </div>

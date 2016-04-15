@@ -43,4 +43,16 @@ public class GetFinanceServiceImpl implements GetFinanceService {
         FinanceDAO financeDAO = new FinanceImpl();
         return financeDAO.GetDayOutputInfo();
     }
+
+    @Override
+    public boolean InsertDayInput(station_day_input sdi) {
+        FinanceDAO financeDAO = new FinanceImpl();
+        return financeDAO.InsertDayInput(sdi);
+    }
+
+    @Override
+    public boolean InsertDayOutput(station_day_output sdo) {
+        FinanceDAO financeDAO = new FinanceImpl();
+        return financeDAO.InsertDayOutput(sdo);
+    }
 }

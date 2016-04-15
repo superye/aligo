@@ -82,4 +82,44 @@ public class FinanceImpl implements FinanceDAO {
         }
         return list;
     }
+
+    @Override
+    public boolean InsertDayInput(station_day_input sdi) {
+        DBAccess dbAccess = new DBAccess();
+        SqlSession sqlSession = null;
+        int flag = 0;
+        try {
+            sqlSession = dbAccess.getSqlSession();
+            flag = sqlSession.update("station_day_input.InsertDayInputInfo", sdi);
+            sqlSession.commit();
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            if (sqlSession != null) {
+                sqlSession.close();
+            }
+        }
+        if (flag != 0) return true;
+        else return false;
+    }
+
+    @Override
+    public boolean InsertDayOutput(station_day_output sdo) {
+        DBAccess dbAccess = new DBAccess();
+        SqlSession sqlSession = null;
+        int flag = 0;
+        try {
+            sqlSession = dbAccess.getSqlSession();
+            flag = sqlSession.update("station_day_output.InsertDayOutputInfo", sdo);
+            sqlSession.commit();
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            if (sqlSession != null) {
+                sqlSession.close();
+            }
+        }
+        if (flag != 0) return true;
+        else return false;
+    }
 }
