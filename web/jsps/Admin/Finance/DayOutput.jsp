@@ -9,7 +9,7 @@
     <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Aligo-Admin-课程管理/师资安排</title>
+    <title>Aligo-Admin-财务管理/查看每日收支/查看每日支出</title>
     <link href="<%=basePath%>resource/css/bootstrap.min.css" rel="stylesheet">
     <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
     <script src="<%=basePath%>resource/js/bootstrap.min.js"></script>
@@ -36,12 +36,11 @@
         </div>
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
-                <li class="dropdown"><a href="#ad-carousel">课程管理</a></li>
+                <li class="dropdown"><a href="admin_LoadCoachCourse.action">课程管理</a></li>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">座位管理 <span class="caret"></span></a>
                     <ul class="dropdown-menu" role="menu">
-                        <li><a href="#feature-tab" data-tab="tab-chrome">查看座位资源</a></li>
-                        <li><a href="#feature-tab" data-tab="tab-firefox">维护座位资源</a></li>
+                        <li><a href="admin_GetSeatInfo.action" data-tab="tab-chrome">查看座位资源</a></li>
                     </ul>
                 </li>
                 <li class="active">
@@ -92,6 +91,9 @@
             <ul class="nav nav-pills">
                 <li role="presentation"><a href="admin_GetDayIncome.action">每日收入管理</a></li>
                 <li role="presentation" class="active"><a href="admin_GetDayOutput.action">每日支出管理</a></li>
+                <div  style="text-align: right;">
+                    <button type="submit" class="btn btn-default"><a href="jsps/Admin/Finance/AddDayOutput.jsp">新增</a></button>
+                </div>
                 <div  style="text-align: right;">
                     <button type="submit" class="btn btn-default"><a href="AddDayOutput.jsp">新增</a></button>
                 </div>

@@ -261,6 +261,19 @@ public class AdminAction extends SuperAction implements ModelDriven<CoachStudent
         return "GetSalary";
     }
 
+    public String InsertDayOutput() {
+        GetFinanceService getFinanceService = new GetFinanceServiceImpl();
+        getFinanceService.InsertDayOutput(sdo);
+        return "InsertDayOutput";
+    }
+
+    public String InsertDayInput() {
+        GetFinanceService getFinanceService = new GetFinanceServiceImpl();
+        getFinanceService.InsertDayInput(sdi);
+        return "InsertDayInput";
+    }
+
+
     public String InsertDayOuput() {
         GetFinanceService getFinanceService = new GetFinanceServiceImpl();
         getFinanceService.InsertDayOutput(sdo);

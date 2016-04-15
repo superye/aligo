@@ -17,7 +17,6 @@ public class Md5Utils {
             byte b[] = md.digest();
 
             int i;
-
             StringBuffer buf = new StringBuffer("");
             for (int offset = 0; offset < b.length; offset++) {
                 i = b[offset];
